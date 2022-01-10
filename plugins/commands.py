@@ -14,8 +14,8 @@ buttons=InlineKeyboardMarkup(
                 InlineKeyboardButton("How Does This Works?", callback_data="abt")
             ],
             [
-                InlineKeyboardButton("Source Code", url="https://github.com/subinps/Forward_2.0"),
-                InlineKeyboardButton("Report a Bug", url="https://t.me/subinps")
+                InlineKeyboardButton("Owner", url="https://t.me/heart_recipe"),
+                InlineKeyboardButton("Channel", url="https://t.me/+WO3opfqhrAc4ZTdh")
             ]
         ]
         )
@@ -60,11 +60,11 @@ async def cb_help(bot, cb):
 
 @Client.on_callback_query(filters.regex(r'^abt$'))   
 async def cb_abt(bot, cb):
-    await cb.message.edit_text("Talking is cheap, Read Code.",
+    await cb.message.edit_text("Join my channel.",
     reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Source", url="https://github.com/subinps/Forward_2.0"),
+                InlineKeyboardButton("Channel", url="https://t.me/+WO3opfqhrAc4ZTdh"),
             ]
         ]
     )
