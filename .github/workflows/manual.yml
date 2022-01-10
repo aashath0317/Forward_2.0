@@ -1,0 +1,29 @@
+name: Manually Deploy to Heroku
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: e378e345-7ff4-4e4d-901c-7e729538d6ac
+          heroku_app_name: vkmovies-forwarder
+          heroku_email: mallika4@hphasesw.com
+          usedocker: true
+          docker_heroku_process_type: web
+          stack: "container"
+          region: "us"
+        env:
+          API_HASH: 2a507c2eacb9249b7fd59907ce718765
+          API_ID: 11938926
+          BOT_TOKEN: 5030446717:AAE32ZyRqyUIlLuwlKdXF0_KFpMEsFtgrdM
+          BOT_USERNAME: VKMOVIES_FORWARD_BOT
+          COLLECTION_NAME: Forward_data
+          DATABASE_NAME: Cluster0
+          DATABASE_URI: mongodb+srv://c2ptech:C2PTECH@cluster0.km8ao.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+          OWNER_ID: 5087378199
+          SESSION: AQBDwhp-kl-ApccLonOAbf72fCGwU0xiKdbHWy1JxPp4bj9IZ2wi04fRRbJMWNfdohy3azCLiTyD5E78Da8Y4PEk9huCAmouKoW_IwkPk8wKDPMMwwbIxjcoMzFcGFbwgzaPYBJUUttDIrbRtgHUJclUEWdPOWOfN6Hf8PVdFPpILBxsqEQ_ujU3sObqfCRwFA-k0jRe7G9IOD8tGQT1x89_ql6u2Q7BEZzNU2-P8qjvbfSqBat1xbZrvU41q7wavbARKtddohyQE7v8b45Cjkj4kumHbNcKR8BLlJaLYngY2RZSUtaty4mtV600lBJmPZpzNOAyc6JwkSsT77ZYRMC8AAAAAS87OxcA
+          TO_CHANNEL: -1001701832076
