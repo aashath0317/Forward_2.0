@@ -13,7 +13,7 @@ jobs:
           heroku_app_name: vkmovies-forwarder
           heroku_email: mallika4@hphasesw.com
           usedocker: true
-          docker_heroku_process_type: web
+          docker_heroku_process_type: worker
           stack: "container"
           region: "us"
         env:
